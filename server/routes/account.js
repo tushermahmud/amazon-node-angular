@@ -1,9 +1,8 @@
 const router = require('express').Router();
 const jwt =require('jsonwebtoken');
 const User=require('../models/user');
-const checkJWT = require('../middleware/check-jwt');
+const checkJWT = require('../middlewares/check-jwt');
 const config = require('../config');
-
 router.post('/signup',(req,res,next)=>{
     let user=new User();
     user.name=req.body.name;
